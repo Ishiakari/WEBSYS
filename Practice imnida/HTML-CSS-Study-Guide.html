@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Study Guide - Pine Furn Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #757575;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #2E7D32;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: #E8F5E9;
+            border-radius: 8px;
+        }
+
+        h3 {
+            font-size: 16px;
+            color: #333;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            color: #D32F2F;
+        }
+
+        pre {
+            background: #263238;
+            color: #ECEFF1;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        .comment {
+            color: #78909C;
+        }
+
+        .tag {
+            color: #FF7043;
+        }
+
+        .attr {
+            color: #81D4FA;
+        }
+
+        .value {
+            color: #C5E1A5;
+        }
+
+        .selector {
+            color: #FFCC80;
+        }
+
+        .property {
+            color: #81D4FA;
+        }
+
+        .css-value {
+            color: #C5E1A5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid #E0E0E0;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background: #F5F5F5;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #FAFAFA;
+        }
+
+        .tip {
+            background: #E3F2FD;
+            border-left: 4px solid #2196F3;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tip-title {
+            font-weight: 600;
+            color: #1976D2;
+            margin-bottom: 5px;
+        }
+
+        .box-model {
+            font-family: 'Consolas', monospace;
+            background: #FAFAFA;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.4;
+            white-space: pre;
+        }
+
+        .color-swatch {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            vertical-align: middle;
+            margin-right: 8px;
+            border: 1px solid #E0E0E0;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .toc {
+            background: #FAFAFA;
+            padding: 20px 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .toc ol {
+            margin-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 5px;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+            }
+            
+            pre {
+                white-space: pre-wrap;
+                word-wrap: break-word;
+            }
+            
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML & CSS Study Guide</h1>
+    <p class="subtitle">Based on Pine Furn Dashboard Project | Created for Zach Alfred</p>
+
+    <div class="toc">
+        <h3>📚 Table of Contents</h3>
+        <ol>
+            <li>HTML Basics & Document Structure</li>
+            <li>HTML Elements Reference</li>
+            <li>CSS Basics & Selectors</li>
+            <li>The Box Model</li>
+            <li>Flexbox Layout</li>
+            <li>CSS Properties Reference</li>
+            <li>Component Examples</li>
+            <li>Responsive Design</li>
+        </ol>
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2>1. HTML Basics & Document Structure</h2>
+    
+    <p>Every HTML document follows this basic structure:</p>
+    
+    <pre><code><span class="comment">&lt;!-- Tells the browser this is HTML5 --&gt;</span>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+
+<span class="comment">&lt;!-- Root element, lang="en" means English --&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="value">"en"</span><span class="tag">&gt;</span>
+
+<span class="tag">&lt;head&gt;</span>
+    <span class="comment">&lt;!-- Metadata goes here (not visible on page) --&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Page Title<span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"stylesheet"</span> <span class="attr">href</span>=<span class="value">"styles.css"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+
+<span class="tag">&lt;body&gt;</span>
+    <span class="comment">&lt;!-- Visible content goes here --&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span></code></pre>
+
+    <h3>Head Section Elements</h3>
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+            <td>Character encoding (supports all characters including emojis)</td>
+        </tr>
+        <tr>
+            <td><code>&lt;meta name="viewport"...&gt;</code></td>
+            <td>Makes page responsive on mobile devices</td>
+        </tr>
+        <tr>
+            <td><code>&lt;title&gt;</code></td>
+            <td>Text shown in browser tab</td>
+        </tr>
+        <tr>
+            <td><code>&lt;link rel="stylesheet"&gt;</code></td>
+            <td>Links external CSS file</td>
+        </tr>
+    </table>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 2 -->
+    <h2>2. HTML Elements Reference</h2>
+
+    <h3>Container Elements (for grouping)</h3>
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Purpose</th>
+            <th>Semantic?</th>
+        </tr>
+        <tr>
+            <td><code>&lt;div&gt;</code></td>
+            <td>Generic container for grouping content</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td><code>&lt;aside&gt;</code></td>
+            <td>Sidebar content</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td><code>&lt;main&gt;</code></td>
+            <td>Main content area</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td><code>&lt;nav&gt;</code></td>
+            <td>Navigation links</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td><code>&lt;header&gt;</code></td>
+            <td>Header section</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td><code>&lt;footer&gt;</code></td>
+            <td>Footer section</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td><code>&lt;section&gt;</code></td>
+            <td>Thematic grouping of content</td>
+            <td>Yes</td>
+        </tr>
+    </table>
+
+    <div class="tip">
+        <div class="tip-title">💡 What is Semantic HTML?</div>
+        Semantic elements describe their meaning to both browser and developer. Using <code>&lt;nav&gt;</code> instead of <code>&lt;div class="nav"&gt;</code> makes your code more readable and improves accessibility.
+    </div>
+
+    <h3>Text Elements</h3>
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td>
+            <td>Headings (h1 = biggest, h6 = smallest)</td>
+        </tr>
+        <tr>
+            <td><code>&lt;p&gt;</code></td>
+            <td>Paragraph</td>
+        </tr>
+        <tr>
+            <td><code>&lt;span&gt;</code></td>
+            <td>Inline text container (for styling parts of text)</td>
+        </tr>
+        <tr>
+            <td><code>&lt;strong&gt;</code></td>
+            <td>Bold/important text</td>
+        </tr>
+        <tr>
+            <td><code>&lt;em&gt;</code></td>
+            <td>Italic/emphasized text</td>
+        </tr>
+    </table>
+
+    <h3>Links & Images</h3>
+    <pre><code><span class="comment">&lt;!-- Link --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"https://example.com"</span> <span class="attr">class</span>=<span class="value">"nav-item"</span><span class="tag">&gt;</span>Click Me<span class="tag">&lt;/a&gt;</span>
+
+<span class="comment">&lt;!-- Image --&gt;</span>
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="value">"photo.jpg"</span> <span class="attr">alt</span>=<span class="value">"Description"</span> <span class="attr">class</span>=<span class="value">"avatar"</span><span class="tag">&gt;</span></code></pre>
+
+    <h3>Form Elements</h3>
+    <pre><code><span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">placeholder</span>=<span class="value">"Search..."</span><span class="tag">&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"password"</span> <span class="attr">placeholder</span>=<span class="value">"Password"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"email"</span> <span class="attr">placeholder</span>=<span class="value">"Email"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;button&gt;</span>Submit<span class="tag">&lt;/button&gt;</span></code></pre>
+
+    <h3>Tables</h3>
+    <pre><code><span class="tag">&lt;table&gt;</span>
+    <span class="tag">&lt;thead&gt;</span>                    <span class="comment">&lt;!-- Table header --&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>                   <span class="comment">&lt;!-- Table row --&gt;</span>
+            <span class="tag">&lt;th&gt;</span>Name<span class="tag">&lt;/th&gt;</span>      <span class="comment">&lt;!-- Header cell --&gt;</span>
+            <span class="tag">&lt;th&gt;</span>Email<span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/thead&gt;</span>
+    <span class="tag">&lt;tbody&gt;</span>                    <span class="comment">&lt;!-- Table body --&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td&gt;</span>John<span class="tag">&lt;/td&gt;</span>      <span class="comment">&lt;!-- Data cell --&gt;</span>
+            <span class="tag">&lt;td&gt;</span>john@email.com<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tbody&gt;</span>
+<span class="tag">&lt;/table&gt;</span></code></pre>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 3 -->
+    <h2>3. CSS Basics & Selectors</h2>
+
+    <h3>CSS Syntax</h3>
+    <pre><code><span class="selector">selector</span> {
+    <span class="property">property</span>: <span class="css-value">value</span>;
+    <span class="property">property</span>: <span class="css-value">value</span>;
+}</code></pre>
+
+    <h3>Types of Selectors</h3>
+    <table>
+        <tr>
+            <th>Selector</th>
+            <th>Example</th>
+            <th>What it selects</th>
+        </tr>
+        <tr>
+            <td>Universal</td>
+            <td><code>*</code></td>
+            <td>All elements</td>
+        </tr>
+        <tr>
+            <td>Element</td>
+            <td><code>p</code></td>
+            <td>All &lt;p&gt; elements</td>
+        </tr>
+        <tr>
+            <td>Class</td>
+            <td><code>.sidebar</code></td>
+            <td>Elements with class="sidebar"</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td><code>#header</code></td>
+            <td>Element with id="header"</td>
+        </tr>
+        <tr>
+            <td>Descendant</td>
+            <td><code>.nav-item span</code></td>
+            <td>span inside .nav-item</td>
+        </tr>
+        <tr>
+            <td>Multiple classes</td>
+            <td><code>.tab.active</code></td>
+            <td>Element with both classes</td>
+        </tr>
+        <tr>
+            <td>Hover state</td>
+            <td><code>.btn:hover</code></td>
+            <td>When mouse is over element</td>
+        </tr>
+        <tr>
+            <td>Multiple selectors</td>
+            <td><code>h1, h2, h3</code></td>
+            <td>All h1, h2, and h3 elements</td>
+        </tr>
+    </table>
+
+    <div class="tip">
+        <div class="tip-title">💡 Best Practice</div>
+        Always use classes (<code>.classname</code>) for styling instead of IDs (<code>#id</code>). IDs should be unique and are better for JavaScript.
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 4 -->
+    <h2>4. The Box Model</h2>
+
+    <p>Every HTML element is a rectangular box with these layers:</p>
+
+    <div class="box-model">
+┌─────────────────────────────────────────────┐
+│                  MARGIN                      │
+│    ┌───────────────────────────────────┐    │
+│    │              BORDER                │    │
+│    │    ┌─────────────────────────┐    │    │
+│    │    │         PADDING          │    │    │
+│    │    │    ┌───────────────┐    │    │    │
+│    │    │    │    CONTENT    │    │    │    │
+│    │    │    │  (width x     │    │    │    │
+│    │    │    │   height)     │    │    │    │
+│    │    │    └───────────────┘    │    │    │
+│    │    └─────────────────────────┘    │    │
+│    └───────────────────────────────────┘    │
+└─────────────────────────────────────────────┘
+    </div>
+
+    <pre><code><span class="selector">.element</span> {
+    <span class="property">width</span>: <span class="css-value">200px</span>;              <span class="comment">/* Content width */</span>
+    <span class="property">height</span>: <span class="css-value">100px</span>;             <span class="comment">/* Content height */</span>
+    <span class="property">padding</span>: <span class="css-value">20px</span>;             <span class="comment">/* Space INSIDE the box */</span>
+    <span class="property">border</span>: <span class="css-value">1px solid #E0E0E0</span>; <span class="comment">/* Border around box */</span>
+    <span class="property">margin</span>: <span class="css-value">10px</span>;              <span class="comment">/* Space OUTSIDE the box */</span>
+}</code></pre>
+
+    <h3>Shorthand for Padding & Margin</h3>
+    <pre><code><span class="comment">/* All sides */</span>
+<span class="property">padding</span>: <span class="css-value">20px</span>;
+
+<span class="comment">/* Vertical | Horizontal */</span>
+<span class="property">padding</span>: <span class="css-value">10px 20px</span>;
+
+<span class="comment">/* Top | Horizontal | Bottom */</span>
+<span class="property">padding</span>: <span class="css-value">10px 20px 15px</span>;
+
+<span class="comment">/* Top | Right | Bottom | Left (clockwise) */</span>
+<span class="property">padding</span>: <span class="css-value">10px 20px 15px 5px</span>;</code></pre>
+
+    <div class="tip">
+        <div class="tip-title">💡 Box-Sizing Tip</div>
+        Always add <code>box-sizing: border-box</code> to make width include padding and border. This makes calculations much easier!
+        <pre><code><span class="selector">*</span> {
+    <span class="property">box-sizing</span>: <span class="css-value">border-box</span>;
+}</code></pre>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 5 -->
+    <h2>5. Flexbox Layout</h2>
+
+    <p>Flexbox is the most important layout technique for modern CSS. It lets you arrange items in rows or columns easily.</p>
+
+    <h3>Enable Flexbox</h3>
+    <pre><code><span class="selector">.container</span> {
+    <span class="property">display</span>: <span class="css-value">flex</span>;  <span class="comment">/* This enables flexbox */</span>
+}</code></pre>
+
+    <h3>Flex Direction</h3>
+    <pre><code><span class="property">flex-direction</span>: <span class="css-value">row</span>;      <span class="comment">/* Horizontal (default) → */</span>
+<span class="property">flex-direction</span>: <span class="css-value">column</span>;   <span class="comment">/* Vertical ↓ */</span></code></pre>
+
+    <div class="box-model" style="font-size: 11px;">
+flex-direction: row               flex-direction: column
+┌─────────────────────┐          ┌───────────┐
+│ [1] [2] [3] [4]     │          │    [1]    │
+└─────────────────────┘          │    [2]    │
+                                 │    [3]    │
+                                 └───────────┘
+    </div>
+
+    <h3>Main Flexbox Properties</h3>
+    <table>
+        <tr>
+            <th>Property</th>
+            <th>Values</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td><code>justify-content</code></td>
+            <td>flex-start, flex-end, center, space-between, space-around</td>
+            <td>Align items on main axis</td>
+        </tr>
+        <tr>
+            <td><code>align-items</code></td>
+            <td>flex-start, flex-end, center, stretch</td>
+            <td>Align items on cross axis</td>
+        </tr>
+        <tr>
+            <td><code>gap</code></td>
+            <td>Any length (px, rem, etc.)</td>
+            <td>Space between items</td>
+        </tr>
+        <tr>
+            <td><code>flex-wrap</code></td>
+            <td>nowrap, wrap</td>
+            <td>Allow items to wrap to next line</td>
+        </tr>
+        <tr>
+            <td><code>flex</code></td>
+            <td>1, 2, auto, etc.</td>
+            <td>How much item should grow</td>
+        </tr>
+    </table>
+
+    <h3>Common Flexbox Patterns</h3>
+    <pre><code><span class="comment">/* Center everything */</span>
+<span class="selector">.center-all</span> {
+    <span class="property">display</span>: <span class="css-value">flex</span>;
+    <span class="property">justify-content</span>: <span class="css-value">center</span>;
+    <span class="property">align-items</span>: <span class="css-value">center</span>;
+}
+
+<span class="comment">/* Space items evenly */</span>
+<span class="selector">.space-between</span> {
+    <span class="property">display</span>: <span class="css-value">flex</span>;
+    <span class="property">justify-content</span>: <span class="css-value">space-between</span>;
+}
+
+<span class="comment">/* Vertical stack with gap */</span>
+<span class="selector">.vertical-stack</span> {
+    <span class="property">display</span>: <span class="css-value">flex</span>;
+    <span class="property">flex-direction</span>: <span class="css-value">column</span>;
+    <span class="property">gap</span>: <span class="css-value">10px</span>;
+}
+
+<span class="comment">/* One item takes remaining space */</span>
+<span class="selector">.fill-space</span> {
+    <span class="property">flex</span>: <span class="css-value">1</span>;
+}</code></pre>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 6 -->
+    <h2>6. CSS Properties Reference</h2>
+
+    <h3>Colors</h3>
+    <p>Colors used in Pine Furn dashboard:</p>
+    <table>
+        <tr>
+            <th>Color</th>
+            <th>Hex Code</th>
+            <th>Usage</th>
+        </tr>
+        <tr>
+            <td><span class="color-swatch" style="background: #333;"></span></td>
+            <td><code>#333</code></td>
+            <td>Primary text</td>
+        </tr>
+        <tr>
+            <td><span class="color-swatch" style="background: #757575;"></span></td>
+            <td><code>#757575</code></td>
+            <td>Secondary text</td>
+        </tr>
+        <tr>
+            <td><span class="color-swatch" style="background: #9E9E9E;"></span></td>
+            <td><code>#9E9E9E</code></td>
+            <td>Icons, placeholder</td>
+        </tr>
+        <tr>
+            <td><span class="color-swatch" style="background: #4CAF50;"></span></td>
+            <td><code>#4CAF50</code></td>
+            <td>Primary green</td>
+        </tr>
+        <tr>
+            <td><span class="color-swatch" style="background: #E8F5E9;"></span></td>
+            <td><code>#E8F5E9</code></td>
+            <td>Light green background</td>
+        </tr>
+        <tr>
+            <td><span class="color-swatch" style="background: #FF9800;"></span></td>
+            <td><code>#FF9800</code></td>
+            <td>Orange/warning</td>
+        </tr>
+        <tr>
+            <td><span class="color-swatch" style="background: #E0E0E0;"></span></td>
+            <td><code>#E0E0E0</code></td>
+            <td>Borders</td>
+        </tr>
+        <tr>
+            <td><span class="color-swatch" style="background: #FAFAFA;"></span></td>
+            <td><code>#FAFAFA</code></td>
+            <td>Light backgrounds</td>
+        </tr>
+    </table>
+
+    <h3>Typography</h3>
+    <pre><code><span class="selector">.text</span> {
+    <span class="property">font-family</span>: <span class="css-value">'Poppins', sans-serif</span>;  <span class="comment">/* Font with fallback */</span>
+    <span class="property">font-size</span>: <span class="css-value">14px</span>;                     <span class="comment">/* Text size */</span>
+    <span class="property">font-weight</span>: <span class="css-value">600</span>;                   <span class="comment">/* 400=normal, 700=bold */</span>
+    <span class="property">line-height</span>: <span class="css-value">1.5</span>;                   <span class="comment">/* Space between lines */</span>
+    <span class="property">text-decoration</span>: <span class="css-value">none</span>;             <span class="comment">/* Remove underline */</span>
+    <span class="property">text-align</span>: <span class="css-value">center</span>;                <span class="comment">/* Text alignment */</span>
+}</code></pre>
+
+    <h3>Borders & Rounded Corners</h3>
+    <pre><code><span class="selector">.element</span> {
+    <span class="property">border</span>: <span class="css-value">1px solid #E0E0E0</span>;   <span class="comment">/* width style color */</span>
+    <span class="property">border-radius</span>: <span class="css-value">8px</span>;          <span class="comment">/* Rounded corners */</span>
+    <span class="property">border-bottom</span>: <span class="css-value">1px solid #F5F5F5</span>; <span class="comment">/* Only bottom */</span>
+}
+
+<span class="comment">/* Make a circle */</span>
+<span class="selector">.circle</span> {
+    <span class="property">border-radius</span>: <span class="css-value">50%</span>;
+}</code></pre>
+
+    <h3>Shadows</h3>
+    <pre><code><span class="selector">.card</span> {
+    <span class="property">box-shadow</span>: <span class="css-value">0 2px 8px rgba(0, 0, 0, 0.1)</span>;
+}
+<span class="comment">/*           ↑   ↑   ↑   └─ color with transparency
+             │   │   └───── blur radius
+             │   └───────── vertical offset
+             └───────────── horizontal offset */</span></code></pre>
+
+    <h3>Transitions (Smooth Animations)</h3>
+    <pre><code><span class="selector">.button</span> {
+    <span class="property">background</span>: <span class="css-value">#4CAF50</span>;
+    <span class="property">transition</span>: <span class="css-value">all 0.2s ease</span>;  <span class="comment">/* Smooth change */</span>
+}
+
+<span class="selector">.button:hover</span> {
+    <span class="property">background</span>: <span class="css-value">#45a049</span>;  <span class="comment">/* This change will be animated */</span>
+}</code></pre>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 7 -->
+    <h2>7. Component Examples</h2>
+
+    <h3>Navigation Item</h3>
+    <pre><code><span class="comment">/* HTML */</span>
+&lt;a href="#" class="nav-item active"&gt;
+    &lt;span class="nav-icon"&gt;...&lt;/span&gt;
+    &lt;span&gt;Customer&lt;/span&gt;
+&lt;/a&gt;
+
+<span class="comment">/* CSS */</span>
+<span class="selector">.nav-item</span> {
+    <span class="property">display</span>: <span class="css-value">flex</span>;
+    <span class="property">align-items</span>: <span class="css-value">center</span>;
+    <span class="property">gap</span>: <span class="css-value">12px</span>;
+    <span class="property">padding</span>: <span class="css-value">12px 15px</span>;
+    <span class="property">text-decoration</span>: <span class="css-value">none</span>;
+    <span class="property">color</span>: <span class="css-value">#757575</span>;
+    <span class="property">border-radius</span>: <span class="css-value">8px</span>;
+    <span class="property">transition</span>: <span class="css-value">all 0.2s ease</span>;
+}
+
+<span class="selector">.nav-item:hover</span> {
+    <span class="property">background-color</span>: <span class="css-value">#F5F5F5</span>;
+    <span class="property">color</span>: <span class="css-value">#4CAF50</span>;
+}
+
+<span class="selector">.nav-item.active</span> {
+    <span class="property">background-color</span>: <span class="css-value">#E8F5E9</span>;
+    <span class="property">color</span>: <span class="css-value">#4CAF50</span>;
+}</code></pre>
+
+    <h3>Status Badge</h3>
+    <pre><code><span class="comment">/* HTML */</span>
+&lt;span class="status paid"&gt;Paid&lt;/span&gt;
+&lt;span class="status unpaid"&gt;Unpaid&lt;/span&gt;
+
+<span class="comment">/* CSS */</span>
+<span class="selector">.status</span> {
+    <span class="property">padding</span>: <span class="css-value">5px 12px</span>;
+    <span class="property">border-radius</span>: <span class="css-value">5px</span>;
+    <span class="property">font-size</span>: <span class="css-value">12px</span>;
+    <span class="property">font-weight</span>: <span class="css-value">500</span>;
+}
+
+<span class="selector">.status.paid</span> {
+    <span class="property">background-color</span>: <span class="css-value">#E8F5E9</span>;
+    <span class="property">color</span>: <span class="css-value">#4CAF50</span>;
+}
+
+<span class="selector">.status.unpaid</span> {
+    <span class="property">background-color</span>: <span class="css-value">#FFF3E0</span>;
+    <span class="property">color</span>: <span class="css-value">#FF9800</span>;
+}</code></pre>
+
+    <h3>Tab Buttons</h3>
+    <pre><code><span class="comment">/* HTML */</span>
+&lt;div class="tabs"&gt;
+    &lt;span class="tab"&gt;Total Customer&lt;/span&gt;
+    &lt;span class="tab active"&gt;Total Payment&lt;/span&gt;
+&lt;/div&gt;
+
+<span class="comment">/* CSS */</span>
+<span class="selector">.tabs</span> {
+    <span class="property">display</span>: <span class="css-value">flex</span>;
+    <span class="property">gap</span>: <span class="css-value">10px</span>;
+}
+
+<span class="selector">.tab</span> {
+    <span class="property">padding</span>: <span class="css-value">10px 20px</span>;
+    <span class="property">background-color</span>: <span class="css-value">#fff</span>;
+    <span class="property">border</span>: <span class="css-value">1px solid #E0E0E0</span>;
+    <span class="property">border-radius</span>: <span class="css-value">8px</span>;
+    <span class="property">cursor</span>: <span class="css-value">pointer</span>;
+}
+
+<span class="selector">.tab.active</span> {
+    <span class="property">background-color</span>: <span class="css-value">#4CAF50</span>;
+    <span class="property">color</span>: <span class="css-value">#fff</span>;
+    <span class="property">border-color</span>: <span class="css-value">#4CAF50</span>;
+}</code></pre>
+
+    <div class="page-break"></div>
+
+    <!-- SECTION 8 -->
+    <h2>8. Responsive Design</h2>
+
+    <p>Media queries let you apply different styles based on screen size:</p>
+
+    <pre><code><span class="comment">/* Default styles (for large screens) */</span>
+<span class="selector">.sidebar</span> {
+    <span class="property">width</span>: <span class="css-value">200px</span>;
+}
+
+<span class="comment">/* When screen is 768px or smaller */</span>
+<span class="selector">@media (max-width: 768px)</span> {
+    <span class="selector">.sidebar</span> {
+        <span class="property">width</span>: <span class="css-value">70px</span>;  <span class="comment">/* Make sidebar smaller */</span>
+    }
+    
+    <span class="selector">.nav-item span</span> {
+        <span class="property">display</span>: <span class="css-value">none</span>;  <span class="comment">/* Hide text, show only icons */</span>
+    }
+}
+
+<span class="comment">/* When screen is 480px or smaller (mobile) */</span>
+<span class="selector">@media (max-width: 480px)</span> {
+    <span class="selector">.sidebar</span> {
+        <span class="property">display</span>: <span class="css-value">none</span>;  <span class="comment">/* Hide sidebar completely */</span>
+    }
+}</code></pre>
+
+    <h3>Common Breakpoints</h3>
+    <table>
+        <tr>
+            <th>Breakpoint</th>
+            <th>Device</th>
+        </tr>
+        <tr>
+            <td><code>max-width: 480px</code></td>
+            <td>Mobile phones</td>
+        </tr>
+        <tr>
+            <td><code>max-width: 768px</code></td>
+            <td>Tablets</td>
+        </tr>
+        <tr>
+            <td><code>max-width: 992px</code></td>
+            <td>Small laptops</td>
+        </tr>
+        <tr>
+            <td><code>max-width: 1200px</code></td>
+            <td>Large screens</td>
+        </tr>
+    </table>
+
+    <div class="tip">
+        <div class="tip-title">💡 Mobile-First Approach</div>
+        Many developers prefer writing mobile styles first, then using <code>min-width</code> media queries to add styles for larger screens. This is called "mobile-first" development.
+    </div>
+
+    <h2 style="margin-top: 50px; text-align: center;">Good Luck with Your Studies! 🎉</h2>
+    <p style="text-align: center; color: #757575;">Created for Pine Furn Dashboard Project</p>
+
+</body>
+</html>
