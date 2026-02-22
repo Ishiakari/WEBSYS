@@ -23,6 +23,78 @@ body {
     display: flex;
     flex-direction: column;
     border-right: 1px solid #E0E0E0;
+    transition: width 0.3s ease;
+    position: relative;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: absolute;
+    top: 20px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar-toggle:hover {
+    background: #F5F5F5;
+}
+
+.sidebar-toggle img {
+    width: 14px;
+    height: 14px;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+    width: 70px;
+    padding: 20px 10px;
+}
+
+.sidebar.collapsed .logo-text {
+    display: none;
+}
+
+.sidebar.collapsed .nav-item > span:last-child,
+.sidebar.collapsed .badge {
+    display: none;
+}
+
+.sidebar.collapsed .user-info,
+.sidebar.collapsed .logout-icon {
+    display: none;
+}
+
+.sidebar.collapsed .logo {
+    justify-content: center;
+}
+
+.sidebar.collapsed .nav-item {
+    justify-content: center;
+    padding: 12px;
+    gap: 0;
+}
+
+.sidebar.collapsed .nav-icon {
+    margin: 0;
+}
+
+.sidebar.collapsed .user-profile {
+    justify-content: center;
+}
+
+.sidebar.collapsed .sidebar-toggle {
+    transform: rotate(180deg);
 }
 
 .logo {
@@ -30,6 +102,14 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    transition: opacity 0.3s ease, width 0.3s ease;
 }
 
 .logo-icon {
@@ -37,11 +117,7 @@ body {
     height: 40px;
 }
 
-.logo-text {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-}
+
 
 .nav-menu {
     display: flex;
@@ -60,7 +136,11 @@ body {
     border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+}
+
+.nav-item span:not(.nav-icon) {
+    transition: opacity 0.3s ease, width 0.3s ease;
 }
 
 .nav-item:hover {
