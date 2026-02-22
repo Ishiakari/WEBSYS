@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main-content.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+        }
+        .main-content {
+            padding: 30px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main class="main-content">
+        <div class="content-header">
+            <h1>Customers</h1>
+            <div class="header-actions">
+                <div class="search-box">
+                    <img src="../images/icons/search.svg" alt="" width="16" height="16">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="date-range">
+                    <span>10-06-2021</span>
+                    <span>10-10-2021</span>
+                    <img src="../images/icons/chevron-down.svg" alt="" width="16" height="16">
+                </div>
+            </div>
+        </div>
+
+<div class="tabs">
+    <span class="tab">Total Customer</span>
+    <span class="tab active">Total Payment</span>
+    <span class="tab">Transaction</span>
+</div>
+
+<div class="table-container">
+    <table class="customer-table">
+        <thead>
+            <tr>
+                <th>Name <span class="sort-icon">▼</span></th>
+                <th>Payment <span class="sort-icon">▼</span></th>
+                <th>Status <span class="sort-icon">▼</span></th>
+                <th>Value</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=John+Deo&background=E3F2FD&color=1976D2&size=36" alt="John Deo" class="customer-avatar">
+                        <span>John Deo</span>
+                    </div>
+                </td>
+                <td>VISA</td>
+                <td><span class="status paid">Paid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=Shelby+Goode&background=FFF3E0&color=F57C00&size=36" alt="Shelby Goode" class="customer-avatar">
+                        <span>Shelby Goode</span>
+                    </div>
+                </td>
+                <td>PAYPAL</td>
+                <td><span class="status unpaid">Unpaid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=John+Deo&background=E3F2FD&color=1976D2&size=36" alt="John Deo" class="customer-avatar">
+                        <span>John Deo</span>
+                    </div>
+                </td>
+                <td>VISA</td>
+                <td><span class="status paid">Paid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=Shelby+Goode&background=FFF3E0&color=F57C00&size=36" alt="Shelby Goode" class="customer-avatar">
+                        <span>Shelby Goode</span>
+                    </div>
+                </td>
+                <td>PAYPAL</td>
+                <td><span class="status paid">Paid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=John+Deo&background=E3F2FD&color=1976D2&size=36" alt="John Deo" class="customer-avatar">
+                        <span>John Deo</span>
+                    </div>
+                </td>
+                <td>VISA</td>
+                <td><span class="status paid">Paid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=Shelby+Goode&background=FFF3E0&color=F57C00&size=36" alt="Shelby Goode" class="customer-avatar">
+                        <span>Shelby Goode</span>
+                    </div>
+                </td>
+                <td>PAYPAL</td>
+                <td><span class="status unpaid">Unpaid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=John+Deo&background=E3F2FD&color=1976D2&size=36" alt="John Deo" class="customer-avatar">
+                        <span>John Deo</span>
+                    </div>
+                </td>
+                <td>VISA</td>
+                <td><span class="status paid">Paid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=Shelby+Goode&background=FFF3E0&color=F57C00&size=36" alt="Shelby Goode" class="customer-avatar">
+                        <span>Shelby Goode</span>
+                    </div>
+                </td>
+                <td>PAYPAL</td>
+                <td><span class="status paid">Paid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=John+Deo&background=E3F2FD&color=1976D2&size=36" alt="John Deo" class="customer-avatar">
+                        <span>John Deo</span>
+                    </div>
+                </td>
+                <td>VISA</td>
+                <td><span class="status unpaid">Unpaid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=Shelby+Goode&background=FFF3E0&color=F57C00&size=36" alt="Shelby Goode" class="customer-avatar">
+                        <span>Shelby Goode</span>
+                    </div>
+                </td>
+                <td>PAYPAL</td>
+                <td><span class="status paid">Paid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=John+Deo&background=E3F2FD&color=1976D2&size=36" alt="John Deo" class="customer-avatar">
+                        <span>John Deo</span>
+                    </div>
+                </td>
+                <td>VISA</td>
+                <td><span class="status paid">Paid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="customer-info">
+                        <img src="https://ui-avatars.com/api/?name=Shelby+Goode&background=FFF3E0&color=F57C00&size=36" alt="Shelby Goode" class="customer-avatar">
+                        <span>Shelby Goode</span>
+                    </div>
+                </td>
+                <td>PAYPAL</td>
+                <td><span class="status unpaid">Unpaid</span></td>
+                <td class="value">PHP 1,000</td>
+                <td class="actions">...</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </main>
+</body>
+</html>

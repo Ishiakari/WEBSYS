@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .sidebar {
+            width: 100% !important;
+            height: 100vh;
+            border-right: none;
+            padding: 20px !important;
+        }
+        /* Override media query collapse */
+        .logo-text { display: inline !important; }
+        .nav-item > span { display: inline !important; }
+        .user-info { display: flex !important; }
+        .logout-icon { display: inline !important; }
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="../images/icons/logo.svg" alt="Pine Valley Logo" width="40" height="40">
+            </div>
+            <span class="logo-text">Pine Valley Furniture</span>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">
+                    <img src="../images/icons/dashboard.svg" alt="" width="20" height="20" class="nav-icon-img">
+                </span>
+                <span>Customer</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <img src="../images/icons/analytics.svg" alt="" width="20" height="20" class="nav-icon-img">
+                </span>
+                <span>Analytics</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <img src="../images/icons/invoice.svg" alt="" width="20" height="20" class="nav-icon-img">
+                </span>
+                <span>Invoice</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <img src="../images/icons/schedule.svg" alt="" width="20" height="20" class="nav-icon-img">
+                </span>
+                <span>Schedule</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <img src="../images/icons/calendar.svg" alt="" width="20" height="20" class="nav-icon-img">
+                </span>
+                <span>Calendar</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <img src="../images/icons/messages.svg" alt="" width="20" height="20" class="nav-icon-img">
+                </span>
+                <span>Messages</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <img src="../images/icons/notification.svg" alt="" width="20" height="20" class="nav-icon-img">
+                </span>
+                <span>Notification</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">
+                    <img src="../images/icons/settings.svg" alt="" width="20" height="20" class="nav-icon-img">
+                </span>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="user-profile">
+            <div class="user-avatar">
+                <img src="https://ui-avatars.com/api/?name=Zach+Alfred&background=4CAF50&color=fff&size=40" alt="Zach Alfred">
+            </div>
+            <div class="user-info">
+                <span class="user-name">Zach Alfred</span>
+                <span class="user-role">Admin</span>
+            </div>
+            <span class="logout-icon">
+                <img src="../images/icons/logout.svg" alt="Logout" width="20" height="20">
+            </span>
+        </div>
+    </aside>
+</body>
+</html>
