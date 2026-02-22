@@ -81,6 +81,17 @@ body {
     justify-content: center;
 }
 
+/* External SVG icon styling */
+.nav-icon-img {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(90%);
+    transition: filter 0.2s ease;
+}
+
+.nav-item:hover .nav-icon-img,
+.nav-item.active .nav-icon-img {
+    filter: brightness(0) saturate(100%) invert(58%) sepia(58%) saturate(438%) hue-rotate(79deg) brightness(92%) contrast(88%);
+}
+
 .badge {
     background-color: #4CAF50;
     color: #fff;
